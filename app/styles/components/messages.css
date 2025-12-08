@@ -1,0 +1,12 @@
+.message {
+  @apply flex gap-2 items-center text-sm font-bold;
+  @apply py-1;
+}
+
+.message-error {
+  @apply text-[#ff4f51];
+}
+
+.message-success {
+  @apply text-green-500;
+}

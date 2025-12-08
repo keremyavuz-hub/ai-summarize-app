@@ -1,0 +1,185 @@
+@layer components {
+  .app-shell {
+    @apply w-full h-screen flex flex-col bg-[#1e1e1e] text-gray-200;
+  }
+
+  .app-header {
+    @apply p-1 bg-[linear-gradient(176deg,#3f3f52,#ac3333)] flex items-center px-4 border-b border-[#a57070];
+  }
+
+  .app-header-menu {
+    @apply flex gap-2 items-center;
+
+    a {
+      @apply text-sm text-white hover:text-white flex items-center gap-1 p-2 py-1 rounded-sm font-bold;
+    }
+
+    a.active {
+      @apply text-white bg-black/30;
+    }
+  }
+
+  .app-body {
+    @apply flex flex-col flex-1 overflow-hidden relative;
+    @apply md:flex-row;
+  }
+
+  .side-panel {
+    @apply hidden w-44 border-r relative border-[#444] py-4 justify-center bg-[linear-gradient(180deg,#3f3f52,#ac3333)];
+    @apply md:flex;
+  }
+
+  .side-panel::before {
+    content: "";
+    @apply absolute top-0 left-full w-0.5 h-full bg-[linear-gradient(180deg,#d25d75,#3395ac)];
+  }
+
+  .logo-box {
+    @apply opacity-80;
+  }
+
+  .main-panel {
+    @apply flex-1 flex flex-col p-4 bg-[linear-gradient(180deg,#292929,#2f2f2f)];
+  }
+
+  .save-banner {
+    @apply mb-3 p-3 rounded-md text-sm bg-green-700 text-white border border-green-500 shadow-md;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.25s ease-out;
+  }
+
+  .main-form {
+    @apply flex flex-col flex-1;
+  }
+
+  .input-area {
+    @apply flex-1;
+  }
+
+  .input-box {
+    @apply w-full h-full resize-none bg-[#3b3b3b] border border-[#333]
+         rounded-md p-3 text-base text-[#dbdbdb] focus:outline-none focus:border-[#666] leading-[1.9];
+  }
+
+  .input-box::placeholder {
+    @apply text-[#666];
+  }
+
+  .loading-box {
+    @apply flex flex-1 items-center justify-center;
+  }
+
+  .result-section {
+    @apply flex flex-col flex-1;
+  }
+
+  .result-title {
+    @apply text-lg flex items-center gap-2 p-3 font-bold border-b border-[#838383];
+  }
+
+  .result-content {
+    @apply flex-1 overflow-auto
+         rounded-md p-4 text-base leading-relaxed;
+  }
+
+  .controls {
+    @apply h-14 flex items-center gap-4 rounded-sm  mt-3 px-2 bg-[linear-gradient(354deg,#3c3b3b,#454545)];
+  }
+
+  .footer-btn {
+    @apply flex items-center gap-2 bg-[#2491aa] hover:bg-[#28a6c3] text-white 
+         px-4 py-2 rounded-md transition-all text-sm cursor-pointer;
+  }
+
+  .footer-btn.reject {
+    @apply bg-[#c14a61] hover:bg-[#cc3c59];
+  }
+
+  .footer-btn.approve {
+    @apply bg-[#2491aa] hover:bg-[#28a6c3];
+  }
+
+  .summaries {
+    @apply flex flex-col overflow-hidden;
+
+    h1 {
+      @apply text-2xl font-bold py-3 w-full flex flex-col gap-4;
+    }
+
+    h1::after {
+      content: "";
+      @apply block h-0.5 bg-[linear-gradient(90deg,#d25d75,#3395ac)];
+    }
+  }
+
+  .summary-list {
+    @apply h-[calc(100vh-210px)];
+    @apply flex flex-col gap-2 overflow-auto;
+
+    .summary-item {
+      @apply border border-[#444] rounded-md p-3;
+    }
+
+    .summary-item.new {
+      @apply bg-[linear-gradient(354deg,#2491aa,#28a6c3)] text-white! cursor-pointer;
+    }
+
+    .summary-item.new * {
+      @apply text-white;
+    }
+
+    .summary-item:hover {
+      @apply bg-[linear-gradient(354deg,#3c3b3b,#454545)] cursor-pointer;
+    }
+
+    .summary-item-date {
+      @apply text-sm text-[#999] min-w-fit;
+    }
+
+    .summary-item-content {
+      @apply text-sm;
+    }
+  }
+
+  .summary-detail {
+    @apply border border-[#444] rounded-md p-3 flex flex-col gap-4 items-center bg-[linear-gradient(354deg,#3c3b3b,#454545)];
+
+    .summary-detail-content {
+      @apply flex-1;
+
+      h3 {
+        @apply flex items-center gap-2 text-lg font-bold mb-2;
+      }
+
+      p {
+        @apply text-sm leading-[1.9];
+      }
+
+      hr {
+        @apply my-5 border border-[#444];
+      }
+    }
+
+    .summary-detail-controls {
+      @apply flex gap-2;
+    }
+
+    button {
+      @apply bg-[#2491aa] hover:bg-[#28a6c3] text-white 
+         px-4 py-2 rounded-md transition-all text-sm cursor-pointer;
+    }
+  }
+}

@@ -1,0 +1,3 @@
+.btn {
+  @apply bg-[#63556a] text-white hover:bg-[#ac91a3] hover:text-[#2b3248] p-2 rounded-sm cursor-pointer;
+}

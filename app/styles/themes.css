@@ -1,0 +1,17 @@
+:root {
+  --color-bg-1: #0f172a;
+  --color-bg-2: #1e293b;
+
+  --color-border: #b985a2;
+  --color-textarea-1: #8a7684;
+  --color-textarea-2: #63556a;
+
+  --color-result-title: #342c43;
+  --color-result-border: #ff8873;
+  --color-result-text: #fff1c8;
+
+  --color-button-bg: #63556a;
+  --color-button-text: #ac91a3;
+  --color-button-bg-hover: #ac91a3;
+  --color-button-text-hover: #2b3248;
+}
